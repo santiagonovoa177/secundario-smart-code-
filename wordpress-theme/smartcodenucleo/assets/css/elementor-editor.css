@@ -1,0 +1,18 @@
+/* Make SCN widgets readable inside Elementor editor canvas */
+.elementor-editor-active .scn-hero,
+.elementor-editor-active .scn-section,
+.elementor-editor-active .scn-page {
+  pointer-events: auto;
+}
+
+.elementor-panel .elementor-element .icon .scn-panel-badge {
+  display: none;
+}
+
+body.elementor-editor-active .scn-loader {
+  display: none !important;
+}
+
+.elementor-add-new-section .elementor-add-section-area-button {
+  margin: 0 5px;
+}

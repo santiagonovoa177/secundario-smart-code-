@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #001038;
+  --navy-deep: #062a45;
+  --teal: #63c6ad;
+  --teal-bright: #63e5c5;
+  --background: #001038;
+  --foreground: #ffffff;
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+a,
+button {
+  transition-timing-function: var(--ease-out-soft);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.85s var(--ease-out-soft) both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.95s var(--ease-out-soft) 0.12s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 1.05s var(--ease-out-soft) 0.24s both;
+}
+
+.glass-btn {
+  backdrop-filter: blur(8px);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
